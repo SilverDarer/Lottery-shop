@@ -1,0 +1,25 @@
+import random
+
+whiles = True
+
+lot = random.randint(0, 101)
+print("Welcome to the Lottery shop!!!")
+
+
+while(whiles):
+    num = int(input("How much Tickets do you need: "))
+    if num > 10:
+        print("Sorry, you can only buy upto 10 tickets")
+
+    else:
+        for i in range(0, num):
+            i = int(input("Choose your number: "))
+            if i == lot:
+                print("You win!!!")
+                break
+            else:
+                print("You loose!")
+        whiles = False
+
+
+print("The lottery number was : " + str(lot))
